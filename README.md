@@ -6,7 +6,7 @@
 
 An editorial photography gallery application developed for **Android Experiment 8: "Implement Menus and WebView in an Android Application"**.
 
-Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark editorial UI design, local WebP photographic asset management, a 3x3 `GridView` with a custom adapter, native Options menus, PopupMenus, and an in-app WebView archive.
+Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark editorial UI design, local WebP photographic asset management, a 3x3 `GridView` with a custom adapter, native Options Menu and PopupMenu interactions, detailed photo inspection, and an in-app WebView archive.
 
 ---
 
@@ -49,19 +49,11 @@ Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark 
 
 ## 📸 Screenshots
 
-The application includes a dark editorial gallery, photo detail inspection, and in-app web archive experience.
+The application includes a dark editorial gallery and photo detail experience.
 
-> Add emulator captures to a `screenshots/` directory using the filenames below to display them here:
-
-| Gallery | Photo Details | Web Archive |
-|---|---|---|
-| `screenshots/gallery.png` | `screenshots/photo-details.png` | `screenshots/web-archive.png` |
-
-```markdown
-![Gallery](screenshots/gallery.png)
-![Photo Details](screenshots/photo-details.png)
-![Web Archive](screenshots/web-archive.png)
-```
+| Gallery | Photo Details |
+|---|---|
+| ![Gallery screenshot](Screenshot%202026-10-09%20125812.png) | ![Photo details screenshot](Screenshot%202026-10-09%20125834.png) |
 
 ---
 
@@ -91,7 +83,7 @@ app/src/main/
     │   ├── activity_main.xml       # Header, GridView, filter pills & bottom bar
     │   ├── activity_detail.xml     # Detail inspection layout
     │   ├── activity_webview.xml     # WebView, progress bar & error overlay
-    │   └── grid_item_frame.xml      # Portrait tile item layout
+    │   └── grid_item_frame.xml     # Portrait tile item layout
     ├── menu/
     │   ├── menu_main.xml           # Options menu
     │   └── menu_image_item.xml     # Item PopupMenu
