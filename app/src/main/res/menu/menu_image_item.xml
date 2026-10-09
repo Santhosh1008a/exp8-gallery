@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_view_image"
+        android:icon="@drawable/ic_visibility"
+        android:title="@string/menu_view_image" />
+    <item
+        android:id="@+id/action_toggle_select"
+        android:icon="@drawable/ic_check"
+        android:title="@string/menu_select" />
+    <item
+        android:id="@+id/action_image_details"
+        android:icon="@drawable/ic_info"
+        android:title="@string/menu_image_details" />
+</menu>

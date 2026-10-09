@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Exp8" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Background & Surface -->
+        <item name="android:windowBackground">@color/frame_bg</item>
+        <item name="colorSurface">@color/frame_surface</item>
+        <item name="colorOnSurface">@color/frame_text_primary</item>
+
+        <!-- Primary Accent -->
+        <item name="colorPrimary">@color/frame_accent</item>
+        <item name="colorOnPrimary">@color/frame_on_accent</item>
+
+        <!-- Edge-to-edge system bars -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+        <!-- Popup Menu Styling -->
+        <item name="popupMenuStyle">@style/Widget.Frame.PopupMenu</item>
+        <item name="android:itemBackground">@color/frame_menu_bg</item>
+    </style>
+
+    <style name="Theme.Exp8" parent="Base.Theme.Exp8" />
+
+    <style name="Widget.Frame.PopupMenu" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_frame_menu</item>
+    </style>
+</resources>

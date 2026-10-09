@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Gallery</string>
+    <string name="gallery_header">Gallery</string>
+    <string name="wordmark">FRAME</string>
+    <string name="main_title">Your visual archive.</string>
+    <string name="main_subtitle">Nine curated photographical frames.</string>
+    <string name="selection_counter_format">%1$d / %2$d SELECTED</string>
+
+    <!-- Category Pills -->
+    <string name="cat_mixed">Mixed</string>
+    <string name="cat_ocean">Ocean</string>
+    <string name="cat_road">Road</string>
+    <string name="cat_creative">Creative</string>
+
+    <!-- Options Menu -->
+    <string name="menu_select_all">Select All</string>
+    <string name="menu_deselect_all">Deselect All</string>
+    <string name="menu_open_webview">Open Web Archive</string>
+    <string name="menu_about">About Gallery</string>
+
+    <!-- Popup Menu -->
+    <string name="menu_view_image">View Image</string>
+    <string name="menu_select">Select Photo</string>
+    <string name="menu_deselect">Deselect Photo</string>
+    <string name="menu_image_details">Photo Details</string>
+
+    <!-- Bottom Action Bar -->
+    <string name="action_select_all">Select All</string>
+    <string name="action_deselect_all">Clear Selection</string>
+    <string name="action_view_selected">View Selected</string>
+
+    <!-- Detail Activity -->
+    <string name="detail_title">Photo Inspection</string>
+    <string name="label_filename">RESOURCE FILENAME</string>
+    <string name="label_status">SELECTION STATUS</string>
+    <string name="label_description">DESCRIPTION</string>
+    <string name="status_selected">SELECTED</string>
+    <string name="status_not_selected">UNSELECTED</string>
+
+    <!-- WebView Activity -->
+    <string name="webview_title">FRAME Web Archive</string>
+    <string name="webview_error_title">Connection Unavailable</string>
+    <string name="webview_error_desc">Unable to load the web archive. Please check your network connection.</string>
+    <string name="btn_retry">Try Again</string>
+
+    <!-- About Dialog -->
+    <string name="about_title">FRAME Gallery</string>
+    <string name="about_message">Experiment 8: Menus and WebView in Android.\n\nDemonstrates custom GridView photography adapter, native Options &amp; Popup Menus, central selection state controller, category filters, and in-app WebView integration.</string>
+    <string name="about_close">Dismiss</string>
+</resources>

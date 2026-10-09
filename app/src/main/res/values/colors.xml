@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- FRAME Reference UI Palette -->
+    <color name="frame_bg">#0D0D0E</color>
+    <color name="frame_surface">#16161A</color>
+    <color name="frame_surface_selected">#1C2214</color>
+    <color name="frame_card_border">#222228</color>
+    <color name="frame_card_border_selected">#D4FF00</color>
+
+    <!-- Accents -->
+    <color name="frame_accent">#D4FF00</color>
+    <color name="frame_accent_dim">#26D4FF00</color>
+    <color name="frame_on_accent">#0F0F11</color>
+
+    <!-- Typography -->
+    <color name="frame_text_primary">#F4F3EF</color>
+    <color name="frame_text_secondary">#A1A1AA</color>
+    <color name="frame_text_dim">#71717A</color>
+
+    <!-- Pills & Menus -->
+    <color name="frame_pill_bg">#1E1E22</color>
+    <color name="frame_pill_bg_active">#323238</color>
+    <color name="frame_menu_bg">#1B1B20</color>
+    <color name="frame_divider">#27272A</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

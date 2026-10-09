@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/frame_bg"
+    tools:context=".MainActivity">
+
+    <!-- Top Header Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Options Menu Button (Top Left - Lab Spec) -->
+        <ImageButton
+            android:id="@+id/btn_options_menu"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/menu_about"
+            android:padding="6dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/frame_text_primary" />
+
+        <!-- Title "Gallery" -->
+        <TextView
+            android:id="@+id/tv_gallery_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/gallery_header"
+            android:textColor="@color/frame_text_primary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_options_menu"
+            app:layout_constraintStart_toEndOf="@id/btn_options_menu"
+            app:layout_constraintTop_toTopOf="@id/btn_options_menu" />
+
+        <!-- Live Selection Badge -->
+        <TextView
+            android:id="@+id/tv_selection_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_frame_menu"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textColor="@color/frame_accent"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_options_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_options_menu"
+            tools:text="0 / 9 SELECTED" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 3x3 Photography GridView -->
+    <GridView
+        android:id="@+id/grid_view_frames"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:horizontalSpacing="3dp"
+        android:numColumns="3"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="72dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="3dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_bar"
+        tools:listitem="@layout/grid_item_frame" />
+
+    <!-- Floating Filter Category Pills (Reference UI Overlay) -->
+    <HorizontalScrollView
+        android:id="@+id/scroll_filter_pills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="16dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/bottom_action_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_filter_pills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Search Button Pill -->
+            <ImageButton
+                android:id="@+id/btn_pill_search"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_pill_inactive"
+                android:contentDescription="@string/cat_mixed"
+                android:padding="9dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/frame_text_primary" />
+
+            <!-- "Mixed" Pill (Default Active) -->
+            <TextView
+                android:id="@+id/btn_pill_mixed"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_pill_active"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/cat_mixed"
+                android:textColor="@color/frame_text_primary"
+                android:textSize="13sp" />
+
+            <!-- "Ocean" Pill -->
+            <TextView
+                android:id="@+id/btn_pill_ocean"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_pill_inactive"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/cat_ocean"
+                android:textColor="@color/frame_text_secondary"
+                android:textSize="13sp" />
+
+            <!-- "Road" Pill -->
+            <TextView
+                android:id="@+id/btn_pill_road"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_pill_inactive"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/cat_road"
+                android:textColor="@color/frame_text_secondary"
+                android:textSize="13sp" />
+
+            <!-- "Creative" Pill -->
+            <TextView
+                android:id="@+id/btn_pill_creative"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_pill_inactive"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="@string/cat_creative"
+                android:textColor="@color/frame_text_secondary"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Bottom Action Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_action_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/frame_surface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_action_select_all"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:text="@string/action_select_all"
+            android:textColor="@color/frame_text_primary"
+            android:textSize="11sp"
+            app:strokeColor="@color/frame_card_border" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_action_deselect_all"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:text="@string/action_deselect_all"
+            android:textColor="@color/frame_text_secondary"
+            android:textSize="11sp"
+            app:strokeColor="@color/frame_card_border" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_action_view_selected"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.2"
+            android:backgroundTint="@color/frame_accent"
+            android:padding="0dp"
+            android:text="@string/action_view_selected"
+            android:textColor="@color/frame_on_accent"
+            android:textSize="11sp"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="border_selected_width">2dp</dimen>
+    <dimen name="border_unselected_width">1dp</dimen>
+    <dimen name="margin_editorial_horizontal">20dp</dimen>
+    <dimen name="margin_editorial_vertical">16dp</dimen>
+    <dimen name="card_corner_radius">14dp</dimen>
+</resources>
