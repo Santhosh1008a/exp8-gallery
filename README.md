@@ -6,7 +6,7 @@
 
 An editorial photography gallery application developed for **Android Experiment 8: "Implement Menus and WebView in an Android Application"**.
 
-Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark editorial UI design, local WebP photographic asset management, a 3x3 `GridView` with a custom adapter, native Options and Popup Menus, central multi-item selection tracking, category filter pills, a detailed image inspection screen, and an in-app `WebView` with custom loading progress and error handling.
+Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark editorial UI design, local WebP photographic asset management, a 3x3 `GridView` with a custom adapter, native Options menus, PopupMenus, and an in-app WebView archive.
 
 ---
 
@@ -47,6 +47,24 @@ Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark 
 
 ---
 
+## 📸 Screenshots
+
+The application includes a dark editorial gallery, photo detail inspection, and in-app web archive experience.
+
+> Add emulator captures to a `screenshots/` directory using the filenames below to display them here:
+
+| Gallery | Photo Details | Web Archive |
+|---|---|---|
+| `screenshots/gallery.png` | `screenshots/photo-details.png` | `screenshots/web-archive.png` |
+
+```markdown
+![Gallery](screenshots/gallery.png)
+![Photo Details](screenshots/photo-details.png)
+![Web Archive](screenshots/web-archive.png)
+```
+
+---
+
 ## 🎨 Design System: FRAME
 
 - **Background**: Deep Charcoal (`#0D0D0E`)
@@ -62,25 +80,25 @@ Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark 
 ```
 app/src/main/
 ├── java/com/example/exp8/
-│   ├── MainActivity.kt          # Main gallery activity & options menu handler
-│   ├── DetailActivity.kt        # Photo inspection activity
-│   ├── WebViewActivity.kt       # In-app web archive activity
-│   ├── FrameGridAdapter.kt      # Custom GridView BaseAdapter
-│   └── FrameItem.kt             # Data model for gallery items
+│   ├── MainActivity.kt             # Main gallery activity & options menu handler
+│   ├── DetailActivity.kt           # Photo inspection activity
+│   ├── WebViewActivity.kt          # In-app web archive activity
+│   ├── FrameGridAdapter.kt         # Custom GridView BaseAdapter
+│   └── FrameItem.kt                # Data model for gallery items
 └── res/
-    ├── drawable/                # 9 local WebP photographs & UI icons
+    ├── drawable/                   # 9 local WebP photographs & UI icons
     ├── layout/
-    │   ├── activity_main.xml    # Header, GridView, filter pills & bottom bar
-    │   ├── activity_detail.xml  # Detail inspection layout
-    │   ├── activity_webview.xml # WebView, progress bar & error overlay
-    │   └── grid_item_frame.xml  # Portrait tile item layout
+    │   ├── activity_main.xml       # Header, GridView, filter pills & bottom bar
+    │   ├── activity_detail.xml     # Detail inspection layout
+    │   ├── activity_webview.xml     # WebView, progress bar & error overlay
+    │   └── grid_item_frame.xml      # Portrait tile item layout
     ├── menu/
-    │   ├── menu_main.xml        # Options menu
-    │   └── menu_image_item.xml  # Item PopupMenu
+    │   ├── menu_main.xml           # Options menu
+    │   └── menu_image_item.xml     # Item PopupMenu
     └── values/
-        ├── colors.xml           # Color tokens
-        ├── strings.xml          # UI string resources
-        └── themes.xml           # Dark editorial theme
+        ├── colors.xml              # Color tokens
+        ├── strings.xml             # UI string resources
+        └── themes.xml              # Dark editorial theme
 ```
 
 ---
