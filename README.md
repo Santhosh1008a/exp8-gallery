@@ -49,19 +49,11 @@ Built using native Kotlin and Android XML, **FRAME** showcases modern 2026 dark 
 
 ## 📸 Screenshots
 
-The application includes a dark editorial gallery, photo detail inspection, and in-app web archive experience.
+### Gallery Screen (3×3 selection view)
+![Gallery screen showing the selected 3x3 gallery](screenshots/gallery.png)
 
-> Add emulator captures to a `screenshots/` directory using the filenames below to display them here:
-
-| Gallery | Photo Details | Web Archive |
-|---|---|---|
-| `screenshots/gallery.png` | `screenshots/photo-details.png` | `screenshots/web-archive.png` |
-
-```markdown
-![Gallery](screenshots/gallery.png)
-![Photo Details](screenshots/photo-details.png)
-![Web Archive](screenshots/web-archive.png)
-```
+### Gallery Screen with Options Menu Open
+![Gallery screen with the options menu open](screenshots/options-menu.png)
 
 ---
 
